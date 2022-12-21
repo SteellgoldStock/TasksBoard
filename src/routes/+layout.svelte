@@ -2,6 +2,10 @@
   import "../app.css";
 </script>
 
+<svelte:head>
+  <title>TasksBoard</title>
+</svelte:head>
+
 <main class="container mx-auto px-2 sm:px-4 py-4">
   <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
