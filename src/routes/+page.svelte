@@ -1,52 +1,15 @@
-<script>
-	let todos = [
-		{ done: false, text: 'finish Svelte tutorial' },
-		{ done: false, text: 'build an app' },
-		{ done: false, text: 'world domination' }
+<script lang="ts">
+	let tasks = [
+		{ title: 'Faire mes devoirs', description: "ptdr", id: 'faire-mes-devoirs' },
+		{ title: 'Manger', description: "Aller au macdo", id: 'manger' },
+		{ title: 'Dormir', description: 'Dormir dans mon lit douillet', id: 'dormir' }
 	];
 
-	function add() {
-		todos = todos.concat({ done: false, text: '' });
-	}
-
-	function clear() {
-		todos = todos.filter(t => !t.done);
-	}
-
-	$: remaining = todos.filter(t => !t.done).length;
+  import { Task } from "$lib/components/task";
 </script>
 
-<h1>Todos</h1>
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
-
-{#each todos as todo}
-	<div class:done={todo.done}>
-		<input
-			type=checkbox
-			bind:checked={todo.done}
-		>
-
-		<input
-			placeholder="What needs to be done?"
-			bind:value={todo.text}
-		>
-	</div>
-{/each}
-
-<p>{remaining} remaining</p>
-
-<button on:click={add}>
-	Add new
-</button>
-
-<button on:click={clear}>
-	Clear completed
-</button>
-
-<style>
-	.done {
-		opacity: 0.4;
-	}
-</style>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3">
+  {#each tasks as task}
+    <Task task_title={task.title} task_description={task.description} task_id={task.id} />
+  {/each}
+</div>
