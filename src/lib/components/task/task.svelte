@@ -1,10 +1,12 @@
 <script lang="ts">
-  export let task_title: string = "Hello world!";
-  export let task_description: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-  export let task_id: string = "my-task";
+  import dayjs from 'dayjs';
+  import { Tag } from '../tag';
+  import type { TaskDetailsProps } from './TaskDetails';
+  
+  export let props : TaskDetailsProps;
 
   function changeColor() {
-    let element = document.getElementsByClassName(task_id)[0];
+    let element = document.getElementsByClassName(props.identifier)[0];
 
     if (element.classList.contains("bg-green-500") && element.classList.contains("hover:bg-green-400")) {
       element.classList.remove("bg-green-500");
@@ -20,24 +22,23 @@
   }
 </script>
 
-<div class="max-w-sm border bg-gray-700 border-gray-500 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
-  <div class="px-4 py-5 sm:p-6">
-    <div class="flex items-center">
-      <div class="{task_id} flex-shrink-0 bg-green-500 rounded-md p-3 hover:bg-green-400 hover:transition-all duration-500" on:click={changeColor} on:keypress={changeColor}> 
-        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+<div class="border border-gray-500 bg-gray-700 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+  <div class="px-4 py-5 sm:p-6 md:p-4">
+    <div class="flex items-center gap-3">
+      <div class="{props.identifier} flex-shrink-0 bg-green-500 rounded-md p-3 hover:bg-green-400 hover:transition-all duration-500" on:click={changeColor} on:keypress={changeColor}>
+        <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l4 4L19 7" />
         </svg>
       </div>
-      <div class="ml-5 w-0 flex-1">
-        <p class="text-sm leading-5 font-medium text-gray-200 dark:text-gray-50 truncate">
-          { task_title }
-        </p>
-        <div class="flex items-baseline">
-          <div class="text-sm leading-2 font-sans text-gray-100 dark:text-gray-300">
-            { task_description }
-          </div>
-        </div>
-      </div>
+      <p class="text-sm leading-5 font-medium text-gray-200 dark:text-gray-50 truncate">
+        { props.title }
+      </p>
     </div>
+    <br>
+    <p class="text-gray-300">
+      { props.description }
+    </p>
+    <hr class="my-4 mx-auto h-1 bg-gray-100 rounded border-0 md:my-5 dark:bg-gray-700">
+    <Tag type="success">Ajouté le { dayjs(props.addedAt).format('DD/MM/YYYY à HH:mm') }</Tag>
   </div>
 </div>
