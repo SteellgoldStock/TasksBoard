@@ -20,7 +20,7 @@
   }
 </script>
 
-<div class="max-w-sm rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
   <div class="px-4 py-5 sm:p-6">
     <div class="flex items-center">
       <div class="{task_id} flex-shrink-0 bg-green-500 rounded-md p-3 hover:bg-green-400 hover:transition-all duration-500" on:click={changeColor} on:keypress={changeColor}> 
@@ -29,11 +29,11 @@
         </svg>
       </div>
       <div class="ml-5 w-0 flex-1">
-        <p class="text-sm leading-5 font-medium text-gray-50 truncate">
+        <p class="text-sm leading-5 font-medium text-gray-800 dark:text-gray-50 truncate">
           { task_title }
         </p>
         <div class="flex items-baseline">
-          <div class="text-sm leading-2 font-sans text-gray-300">
+          <div class="text-sm leading-2 font-sans text-gray-700 dark:text-gray-300">
             { task_description }
           </div>
         </div>
