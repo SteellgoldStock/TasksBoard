@@ -1,7 +1,13 @@
 <script lang="ts">
   import type { TaskDetailsProps } from './TaskDetails';
+  import dayjs from 'dayjs';
+  import { Tag } from '../tag';
   
   export let props : TaskDetailsProps;
+
+  let date = dayjs(props.addedAt).format('DD/MM/YYYY');
+  let hour = dayjs(props.addedAt).format('HH');
+  let minute = dayjs(props.addedAt).format('mm');
 
   function changeColor() {
     let element = document.getElementsByClassName(props.identifier)[0];
@@ -28,13 +34,11 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l4 4L19 7" />
         </svg>
       </div>
-      <p class="text-sm leading-5 font-medium text-gray-200 dark:text-gray-50 truncate">
-        { props.title }
-      </p>
+      <p class="text-sm leading-5 font-medium text-gray-200 dark:text-gray-50 truncate">{ props.title }</p>
     </div>
-    <br>
-    <p class="text-gray-300">
-      { props.description }
-    </p>
+    <p class="text-gray-300 mt-3">{ props.description }</p>
+    <div class="flex mt-2">
+      <Tag type="default">Ajouté le { date } à { hour }h{ minute }m</Tag>
+    </div>
   </div>
 </div>
