@@ -20,7 +20,7 @@
   }
 </script>
 
-<div class="border border-gray-500 bg-gray-700 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+<div class="break-inside-avoid mb-3 border border-gray-500 bg-gray-700 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
   <div class="px-4 py-5 sm:p-6 md:p-4">
     <div class="flex items-center gap-3">
       <div class="{props.identifier} flex-shrink-0 bg-green-500 rounded-md p-3 hover:bg-green-400 hover:transition-all duration-500" on:click={changeColor} on:keypress={changeColor}>

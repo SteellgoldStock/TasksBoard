@@ -8,9 +8,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        'mbl': '425px',
-      },
       colors: {
         'primary': '#111827',
         'secondary': '#1F2937',
