@@ -1,11 +1,6 @@
 <script lang="ts">
   import "../app.css";
-  import 'flowbite';
 </script>
-
-<svelte:head>
-  <title>TasksBoard</title>
-</svelte:head>
 
 <main class="container mx-auto px-2 sm:px-4 py-4">
   <nav class="bg-gray-800 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
