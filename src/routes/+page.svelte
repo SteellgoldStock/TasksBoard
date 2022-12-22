@@ -1,15 +1,15 @@
 <script lang="ts">
 	let tasks = [
-		{ title: 'Faire mes devoirs az az France', description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, libero nobis dolorum nulla repellat eos tempora voluptatibus et? Minima, saepe.", id: 'faire-mes-devoirs', addedAt: 1671633179722 },
-		{ title: 'Manger', description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum animi eos explicabo voluptatibus rem qui nulla ea ratione tempora aspernatur repudiandae omnis a ad sunt corporis, natus exercitationem maiores.", id: 'manger', addedAt: 1671891279722 },
-		{ title: 'Dormir', description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci vero voluptatem, fugit velit sed pariatur ea est sunt accusamus blanditiis unde saepe, nemo laborum necessitatibus delectus culpa totam doloremque eligendi voluptate ratione nisi. Sapiente debitis atque quos doloremque, delectus commodi. Voluptatibus, asperiores quod libero iusto nulla aut possimus obcaecati. Eos!', id: 'dormir', addedAt: 1097789160000 },
-		{ title: 'Développer', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur veritatis culpa magni!', id: 'developper', addedAt: 1578466980000 }
+		{ title: 'Built for Error', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, eius.", id: "built-for-error", addedAt: 1671633179722 },
+		{ title: 'Secret of the Three-Inch Inspector', description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, modi! Quidem temporibus fugit repellat perspiciatis obcaecati non aliquid illum error. Quasi aperiam eveniet quod eligendi quidem doloremque iste cumque atque.", id: "secret-of-the-three-inch-inspector", addedAt: 1671891279722 },
+		{ title: 'Sugar and Spice', description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero temporibus modi cum quo aliquid autem illum deserunt sit qui? Quaerat molestiae asperiores, deleniti omnis distinctio adipisci debitis nam maxime. Cumque sint nemo culpa voluptatum. Libero voluptatibus tenetur necessitatibus tempora quod, sit natus quisquam consectetur beatae, quos odit, qui maxime dolores!", id: "sugar-and-spice", addedAt: 1097789160000 },
+		{ title: 'Mister Nice', description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore maiores obcaecati deserunt, fugit debitis esse magnam nam alias eos cupiditate!", id: 'mister-nice', addedAt: 1578466980000 }
 	];
 
   import { Task } from "$lib/components/task";
 </script>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3">
+<div class="items-baseline grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3">
   {#each tasks as task}
     <Task props={
       {

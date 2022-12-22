@@ -1,6 +1,4 @@
 <script lang="ts">
-  import dayjs from 'dayjs';
-  import { Tag } from '../tag';
   import type { TaskDetailsProps } from './TaskDetails';
   
   export let props : TaskDetailsProps;
@@ -38,7 +36,5 @@
     <p class="text-gray-300">
       { props.description }
     </p>
-    <hr class="my-4 mx-auto h-1 bg-gray-100 rounded border-0 md:my-5 dark:bg-gray-700">
-    <Tag type="success">Ajouté le { dayjs(props.addedAt).format('DD/MM/YYYY à HH:mm') }</Tag>
   </div>
 </div>
