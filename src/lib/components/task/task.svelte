@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { TaskDetailsProps } from './TaskDetails';
   import dayjs from 'dayjs';
-  import { Tag } from '$lib/components/tag';
   
   export let props : TaskDetailsProps;
   let date = dayjs(props.addedAt).format('DD/MM/YYYY');
@@ -27,7 +26,7 @@
   }
 </script>
 
-<div class="mb-3 border border-gray-500 bg-gray-700 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:border-gray-300 hover:transition-all duration-500 {completed ? "order-last" : ""}">
+<div class="mb-3 border-2 {completed ? "border-dashed" : ""} border-gray-500 bg-gray-700 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:border-gray-300 hover:transition-all duration-500 {completed ? "order-last opacity-30 hover:opacity-60" : ""}">
   <div class="px-4 py-5 sm:p-6 md:p-4">
     <div class="flex items-center gap-3">
       <div class="{props.identifier} flex-shrink-0 bg-green-500 rounded-md p-3 hover:bg-green-400 hover:transition-all duration-500" on:click={changeColor} on:keypress={changeColor}>
