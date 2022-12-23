@@ -11,7 +11,7 @@
   import { Task } from "$lib/components/task";
 </script>
 
-<div class="tasks columns-1 md:columns-2 lg:columns-3 gap-x-3">
+<div class="grid grid-cols-3 gap-x-3.5">
   {#each tasks as task}
     <Task props={{ title: task.title, description: task.description, identifier: task.id, addedAt: task.addedAt }} />
   {/each}
