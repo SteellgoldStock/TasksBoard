@@ -27,7 +27,7 @@
   }
 </script>
 
-<div class="mb-3 border border-gray-500 bg-gray-700 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:border-gray-300 hover:transition-all duration-500 {completed ? "order-last dark:bg-green-900" : "dark:bg-red-900"}">
+<div class="mb-3 border border-gray-500 bg-gray-700 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 hover:border-gray-300 hover:transition-all duration-500 {completed ? "order-last" : ""}">
   <div class="px-4 py-5 sm:p-6 md:p-4">
     <div class="flex items-center gap-3">
       <div class="{props.identifier} flex-shrink-0 bg-green-500 rounded-md p-3 hover:bg-green-400 hover:transition-all duration-500" on:click={changeColor} on:keypress={changeColor}>
@@ -39,5 +39,8 @@
       <p class="text-sm leading-5 font-medium text-gray-200 dark:text-gray-50 truncate">{ props.title }</p>
     </div>
     <p class="text-gray-300 mt-3">{ props.description }</p>
+    <!-- <div class="flex mt-2">
+      <Tag type="default">Ajouté le { date } à { hour }h{ minute }m</Tag>
+    </div> -->
   </div>
 </div>
