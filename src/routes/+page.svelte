@@ -8,11 +8,10 @@
 		{ title: 'Zoubiyoulou', description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit error consequuntur id. Qui nobis, cumque dolore ipsam earum sapiente velit accusantium voluptatem molestiae molestias et ab nemo inventore. Possimus, accusamus.", id: 'zoubiyoulou', addedAt: 1578414778500 },
 		{ title: 'Pokémon', description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, laborum veniam necessitatibus non quaerat et ab quod soluta reprehenderit qui facilis? Dolorum, harum voluptatum. Dicta dolorum quasi incidunt labore totam maiores sed magnam, voluptatum delectus architecto consequatur enim sunt?", id: 'pokemon', addedAt: 1578965888700 }
 	];
-
   import { Task } from "$lib/components/task";
 </script>
 
-<div class="grid columns-1 md:columns-2 lg:columns-3 gap-x-3">
+<div class="grid grid-cols-3 gap-x-3.5">
   {#each tasks as task}
     <Task props={{ title: task.title, description: task.description, identifier: task.id, addedAt: task.addedAt }} />
   {/each}
