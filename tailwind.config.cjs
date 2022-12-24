@@ -3,8 +3,7 @@ module.exports = {
   darkMode: 'media',
 
   content: [
-    './src/**/*.{html,js,svelte,ts}',
-    "./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}",
+    './src/**/*.{html,js,svelte,ts}'
   ],
   theme: {
     extend: {
@@ -19,7 +18,6 @@ module.exports = {
     }
   },
   plugins: [
-    require('flowbite/plugin'),
     require('@tailwindcss/forms')
   ],
 }
