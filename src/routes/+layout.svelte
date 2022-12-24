@@ -1,5 +1,6 @@
 <script lang="ts">
   import "../app.css";
+  let show = false;
 </script>
 
 <main class="container mx-auto px-2 sm:px-4 py-4">
@@ -14,7 +15,19 @@
     </div>
   </nav>
 
-  <div class="container mx-auto px-2 sm:px-4 py-4">
-    <slot />
-  </div>
+  {#if show}
+    <div class="grid grid-cols-2 md:grid-cols-6">
+      <div class="col-span-3 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+        <p class="text-2xl font-bold text-white">Nouvelle tâche</p>
+      </div>
+      <div class="col-span-3 sm:col-span-4 lg:col-span-5 xl-col-span-5">
+        <slot />
+      </div>
+    </div>
+  {:else}
+    <div class="container mx-auto px-2 sm:px-4 py-4">
+      <slot />
+    </div>
+  {/if}
+  
 </main>
