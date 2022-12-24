@@ -1,6 +1,10 @@
 <script lang="ts">
   import "../app.css";
+
   let show = false;
+  function toggle() {
+    show = !show;
+  }
 </script>
 
 <main class="container mx-auto px-2 sm:px-4 py-4">
@@ -11,6 +15,7 @@
       </a>
       <div class="flex md:order-2">
         <!-- TODO: Add button for connect (with GitHub? or Discord?) -->
+        <button on:click={toggle} type="button" class="text-white border-2 border-gray-500 hover:border-gray-300 bg-gray-700 dark:border-gray-700 dark:bg-gray-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 hover:transition-all duration-500">Nouvelle tâche</button>
       </div>
     </div>
   </nav>
