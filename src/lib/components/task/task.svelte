@@ -38,8 +38,5 @@
       <p class="text-sm leading-5 font-medium text-gray-200 dark:text-gray-50 truncate">{ props.title }</p>
     </div>
     <p class="text-gray-300 mt-3">{ props.description }</p>
-    <!-- <div class="flex mt-2">
-      <Tag type="default">Ajouté le { date } à { hour }h{ minute }m</Tag>
-    </div> -->
   </div>
 </div>
