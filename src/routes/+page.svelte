@@ -1,12 +1,12 @@
 <section>
-  <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-      <div class="mr-auto place-self-center lg:col-span-7">
-          <h1 class="max-w-2xl mb-4 text-4xl font-extrabold text-white tracking-tight leading-none md:text-5xl xl:text-6xl">Your new task management tool</h1>
-          <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Use it and make it easy for yourself to know what task you have to do that day?</p>
+  <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-sm text-center">
+          <h2 class="text-4xl tracking-tight font-extrabold leading-tight text-gray-900 dark:text-white">Your new task management tool</h2>
+          <p class="mb-1 font-light text-gray-500 dark:text-gray-400 md:text-lg">Use it and make it easy for yourself to know what task you have to do that day?</p>
       </div>
+  </div>
 
-      <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png" alt="mockup">
-      </div>
+  <div class="flex justify-center py-5">
+    <img src="https://via.placeholder.com/800x400.png/" alt="task management">
   </div>
 </section>
