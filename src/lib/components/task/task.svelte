@@ -1,6 +1,7 @@
 <script lang="ts">
-  import type { TaskDetailsProps } from './TaskDetails';
   import dayjs from 'dayjs';
+  import type { TaskDetailsProps } from './TaskDetails';
+  import { removeClasses, addClasses } from '$lib/utils/Classes';
   
   export let props : TaskDetailsProps;
   let date = dayjs(props.addedAt).format('DD/MM/YYYY');
@@ -9,18 +10,16 @@
   
   export let completed: boolean = false;
   function changeColor() {
-    let element = document.getElementsByClassName(props.identifier)[0];
+    // @ts-ignore
+    let element: HTMLElement = document.getElementsByClassName(props.identifier)[0];
+
     if (element.classList.contains("bg-green-500") && element.classList.contains("hover:bg-green-400")) {
-      element.classList.remove("bg-green-500");
-      element.classList.remove("hover:bg-green-400");
-      element.classList.add("bg-rose-500");
-      element.classList.add("hover:bg-rose-400");
+      removeClasses(element, ["bg-green-500", "hover:bg-green-400"]);
+      addClasses(element, ["bg-rose-500", "hover:bg-rose-400"]);
       completed = true;
     } else {
-      element.classList.remove("bg-rose-500");
-      element.classList.remove("hover:bg-rose-400");
-      element.classList.add("bg-green-500");
-      element.classList.add("hover:bg-green-400");
+      removeClasses(element, ["bg-rose-500", "hover:bg-rose-400"]);
+      addClasses(element, ["bg-green-500", "hover:bg-green-400"]);
       completed = false;
     }
   }
