@@ -1,5 +1,5 @@
-import { PORT } from "$env/static/private";
+import { PORT, URL } from "$env/static/private";
 
-export function parseURL(url: string, https: boolean = false) {
-  return (https ? "https://" : "http://") + "127.0.0.1:" + PORT + "/" + url;
+export function parseURL(end_url: string, https: boolean = false) {
+  return (https ? "https://" : "http://") + URL + "/" + end_url;
 }
