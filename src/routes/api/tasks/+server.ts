@@ -34,4 +34,5 @@ export async function PUT({ url, request } : RequestEvent) : Promise<Response> {
     return new Response(`Task ID ${bodyParsed.data.id} successfuly updated`, { status: 200 });
   }
 
+  return new Response(`Task ID ${bodyParsed.data.id} not found`, { status: 404 });
 }
