@@ -67,3 +67,15 @@ export async function PUT({ url, request } : RequestEvent) : Promise<Response> {
 
   return new Response(`Task ID ${bodyParsed.data.id} not found`, { status: 404 });
 }
+
+export async function DELETE({ url } : RequestEvent) : Promise<Response> {
+  if (url.searchParams.get('authToken') !== TEMP_AUTHENTIFICATION_TOKEN) return new Response('Unauthorized', { status: 401 });
+
+  if (url.searchParams.get('id')) {
+    const task = Tasks.find(task => task.id === url.searchParams.get('id'));
+    if (task) {
+      Tasks.splice(Tasks.indexOf(task), 1);
+      return new Response(`Task ID ${url.searchParams.get('id')} successfuly deleted`, { status: 200 });
+    } else return new Response(`Task ID ${url.searchParams.get('id')} not found`, { status: 404 });
+  } else return new Response("Parameter ID missing", { status: 400 });
+}
