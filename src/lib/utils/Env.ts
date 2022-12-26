@@ -1,4 +1,4 @@
-import { PORT, URL, TEMP_AUTHENTIFICATION_TOKEN } from "$env/static/private";
+import { URL, TEMP_AUTHENTIFICATION_TOKEN } from "$env/static/private";
 
 export function parseURL(end_url: string, https: boolean = false) {
   // AUTH_TOKEN is temporary, will be replaced by a token given by the user
