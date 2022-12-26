@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Task } from '$lib/components/task';
   
-  export let data : import('./$types').PageData
+  export let data : import('./$types').PageData;
   const tasks = JSON.parse(data.props.tasks);
 </script>
 
