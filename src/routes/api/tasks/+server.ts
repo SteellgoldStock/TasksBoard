@@ -1,7 +1,6 @@
 import type { RequestEvent } from '@sveltejs/kit';
 import { Tasks } from './tasks';
 
-// const GET export, return Promise<Response>
 export async function GET({ url } : RequestEvent) : Promise<Response> {
   if (url.searchParams.get('id')) {
     const task = Tasks.find(task => task.id === url.searchParams.get('id')) || {};
