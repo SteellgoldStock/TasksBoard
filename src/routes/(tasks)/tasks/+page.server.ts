@@ -1,8 +1,9 @@
+import { parseURL } from '$lib/utils/Env';
 import type { LoadEvent } from '@sveltejs/kit';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ }: LoadEvent) {
-  const response = await fetch('http://127.0.0.1:5173/api/tasks/all');
+  const response = await fetch(parseURL("api/tasks/all"));
   const tasks = await response.json();
 
   return {
