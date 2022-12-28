@@ -1,5 +1,5 @@
 import { parseURL } from '$lib/utils/Env';
-import { redirect, type LoadEvent } from '@sveltejs/kit';
+import type { LoadEvent } from '@sveltejs/kit';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ }: LoadEvent) {
