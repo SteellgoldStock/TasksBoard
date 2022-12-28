@@ -1,5 +1,5 @@
 import { parseURL } from '$lib/utils/Env';
-import type { LoadEvent } from '@sveltejs/kit';
+import { redirect, type LoadEvent } from '@sveltejs/kit';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ }: LoadEvent) {
@@ -7,8 +7,6 @@ export async function load({ }: LoadEvent) {
   const tasks = await response.json();
 
   return {
-    props: {
-      tasks: JSON.stringify(tasks)
-    }
+    tasks: JSON.stringify(tasks)
   };
 }
