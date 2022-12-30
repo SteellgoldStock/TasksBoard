@@ -1,1 +1,1 @@
-export { default as Task } from './task.svelte';
+export { default as Task } from "./task.svelte";
