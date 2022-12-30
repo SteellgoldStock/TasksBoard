@@ -1,6 +1,9 @@
 export interface TaskDetailsProps {
-  title: string;
-  description: string;
-  addedAt: number;
-  identifier: string;
+  taskIdentifier: string;
+  taskTitle: string;
+  taskContent: string;
+  taskAuthor: string;
+  isCompleted: boolean;
+  completedAt: string | null;
+  createdAt: string;
 }
