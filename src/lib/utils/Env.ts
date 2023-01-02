@@ -1,5 +1,5 @@
-import { URL } from "$env/static/private";
+import { URL, REQUEST_TYPE } from "$env/static/private";
 
-export function parseURL(endUrl: string, https = false) {
-  return (https ? "https://" : "http://") + URL + "/" + endUrl;
+export function parseURL(endUrl: string) {
+  return REQUEST_TYPE + "://" + URL + "/" + endUrl;
 }
