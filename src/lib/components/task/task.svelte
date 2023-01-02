@@ -11,7 +11,7 @@
   export let completed: boolean = false;
   function changeColor() {
     // @ts-ignore
-    let element: HTMLElement = document.getElementsByClassName(props.identifier)[0];
+    let element: HTMLElement = document.getElementsByClassName(props.taskIdentifier)[0];
 
     if (element.classList.contains("bg-green-500") && element.classList.contains("hover:bg-green-400")) {
       removeClasses(element, ["bg-green-500", "hover:bg-green-400"]);
