@@ -26,11 +26,9 @@
             <!-- Modal body -->
             <div class="p-6 space-y-6">
                 <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nihil, impedit earum saepe est consequatur nesciunt repellendus distinctio eum amet sequi ea animi officia optio. Repellat quae possimus quaerat eos.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nihil, impedit earum saepe est consequatur nesciunt repellendus distinctio eum amet sequi ea animi officia optio. Repellat quae possimus quaerat eos.
                 </p>
-                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    Nemo numquam minus odit, ea illum deleniti ratione porro itaque odio soluta provident consectetur aperiam, est adipisci id omnis. Enim illum voluptatum nemo dignissimos incidunt aliquam dolorem optio. Ipsam placeat officia, voluptatum soluta quae earum odio accusamus voluptatem numquam reprehenderit similique modi, harum excepturi delectus mollitia quisquam vero, rem eveniet provident. Earum laborum eaque, error labore consequatur quam praesentium inventore voluptatem temporibus hic magni deleniti expedita dicta?
-                </p>
+                <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
             </div>
             <!-- Modal footer -->
             <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
