@@ -1,42 +1,38 @@
 {
-	"name": "tasksboard",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev --host",
-		"build": "vite build",
-		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
-		"story:dev": "histoire dev",
-    "story:build": "histoire build",
-    "story:preview": "histoire preview"
-	},
-	"devDependencies": {
-		"@bluzzi/eslint-config": "^0.8.2",
-		"@histoire/plugin-svelte": "^0.12.4",
-		"@sveltejs/adapter-auto": "^1.0.0",
-		"@sveltejs/kit": "^1.0.0",
-		"@tailwindcss/forms": "^0.5.3",
-		"@types/jsonwebtoken": "^9.0.0",
-		"autoprefixer": "^10.4.13",
-		"eslint": "^8.30.0",
-		"histoire": "^0.12.4",
-		"postcss": "^8.4.20",
-		"svelte": "^3.54.0",
-		"svelte-check": "^2.9.2",
-		"tailwindcss": "^3.2.4",
-		"tslib": "^2.4.1",
-		"typescript": "^4.9.3",
-		"vite": "^4.0.0"
-	},
-	"type": "module",
-	"dependencies": {
-		"clsx": "^1.2.1",
-		"dayjs": "^1.11.7",
-		"jsonwebtoken": "^9.0.0",
-		"zod": "^3.20.2"
-	}
+  "name": "tasksboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@bluzzi/eslint-config": "^0.8.2",
+    "@sveltejs/adapter-auto": "^1.0.0",
+    "@sveltejs/kit": "^1.0.0",
+    "@types/jsonwebtoken": "^9.0.0",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^8.3.0",
+    "eslint": "^8.30.0",
+    "postcss": "^8.4.20",
+    "svelte": "^3.55.0",
+    "svelte-check": "^2.9.2",
+    "svelte-loader": "^3.1.4",
+    "tailwindcss": "^3.2.4",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "dayjs": "^1.11.7",
+    "jsonwebtoken": "^9.0.0",
+    "zod": "^3.20.2"
+  }
 }
