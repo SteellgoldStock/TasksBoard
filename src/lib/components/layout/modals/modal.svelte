@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { CloseSvg } from "../svg";
-    import { Text } from "../text";
+  import { CloseSvg } from "$lib/components/layout/svg";
+  import { Text } from "$lib/components/layout/text";
 
   export let modalId: string;
   export let modalTitle: string;
 </script>
 
-<div id={modalId} data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="fixed z-50 flex h-full w-full items-center justify-center">
+<div id={modalId} data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="fixed z-50 flex h-full w-full items-center justify-center hidden">
   <div class="w-5/12 rounded-lg bg-default-secondary shadow transition-all ease-in-out duration-500">
     <!-- title -->
     <div class="flex items-center justify-between border-b p-4 dark:border-gray-600">
