@@ -3,6 +3,7 @@
   import type { TaskDetailsProps } from './TaskDetails';
   import { removeClasses, addClasses } from '$lib/utils/Classes';
     import clsx from 'clsx';
+    import { Text } from '../text';
   
   export let props : TaskDetailsProps;
 
@@ -21,7 +22,7 @@
 
     // @ts-ignore
     let element: HTMLElement = document.getElementsByClassName(props.taskIdentifier)[0];
-
+    
     if (element.classList.contains("bg-green-500") && element.classList.contains("hover:bg-green-400")) {
       removeClasses(element, ["bg-green-500", "hover:bg-green-400"]);
       addClasses(element, ["bg-rose-500", "hover:bg-rose-400"]);
@@ -42,9 +43,8 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l4 4L19 7" />
         </svg>
       </div>
-
-      <p class="text-sm leading-5 font-medium text-light dark:text-dark-light truncate">{ props.taskTitle }</p>
     </div>
-    <p class="text-gray-300 mt-3">{ props.taskContent }</p>
+    <div class="mt-3">
+    </div>
   </div>
 </div>
