@@ -16,8 +16,8 @@ module.exports = {
           "success": "#047857",
           "warning": "#f59e0b",
           "info": "#075985",
+          DEFAULT: "#e2e8f0",
           "light": {
-            DEFAULT: "#e2e8f0",
             "border": {
               DEFAULT: "#64748b",
               "hover": "#cbd5e1"
@@ -32,8 +32,8 @@ module.exports = {
           "success": "#10b981",
           "warning": "#fbbf24",
           "info": "#0891b2",
+          DEFAULT: "#f8fafc",
           "light": {
-            DEFAULT: "#f8fafc",
             "border": {
               DEFAULT: "#374151",
               "hover": "#cbd5e1"
