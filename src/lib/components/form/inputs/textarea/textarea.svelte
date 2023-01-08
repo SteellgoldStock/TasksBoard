@@ -12,5 +12,5 @@
   }
 </script>
 
-<textarea id="message" rows={rows} cols={cols} class="block p-2.5 w-full text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white" placeholder={placeholder} disabled={disabled} on:change={changeValue}>
+<textarea id="message" rows={rows} cols={cols} max class="{disabled == true ? "dark:bg-gray-800 border-gray-600" : ""} block p-2.5 w-full text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white" placeholder={placeholder} disabled={disabled} on:change={changeValue}>
 </textarea>
