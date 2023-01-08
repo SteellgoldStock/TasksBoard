@@ -1,5 +1,5 @@
 ## Todo Elements:
-- [ ] TextArea
+- [X] TextArea
 - [ ] Button
   - [ ] Primary
   - [ ] Secondary
@@ -8,4 +8,4 @@
   - [ ] Info
   - [ ] Warning
 - [ ] Select
-- [ ] Input
+- [X] Input
