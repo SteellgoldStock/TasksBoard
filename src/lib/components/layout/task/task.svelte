@@ -43,8 +43,10 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l4 4L19 7" />
         </svg>
       </div>
+      <Text size="sm" font="medium" align="left" color="text-default dark:text-dark">{ props.taskTitle }</Text>
     </div>
     <div class="mt-3">
+      <Text size="base" font="normal" align="left" color="text-gray-300">{ props.taskContent }</Text>
     </div>
   </div>
 </div>

@@ -1,0 +1,1 @@
+    <Text size="base" align="left" color="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nihil, impedit earum saepe est consequatur nesciunt repellendus distinctio eum amet sequi ea animi officia optio. Repellat quae possimus quaerat eos.</Text>
