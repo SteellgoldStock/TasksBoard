@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { Task } from '$lib/components/task';
+    import { Task } from '$lib/components/layout/task';
+
   
   export let data : import('./$types').PageData;
   const tasks = JSON.parse(data.tasks);
