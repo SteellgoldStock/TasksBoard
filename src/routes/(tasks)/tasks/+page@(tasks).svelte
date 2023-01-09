@@ -20,7 +20,7 @@
         <TextArea bind:value={newTaskContent} placeholder="Description de la tâche" />
       </div>
       <div class="mt-3">
-        <button type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-1 focus:outline-none">Créer la tâche</button>
+        <button type="button" class="px-3 py-2 w-full text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-1 focus:outline-none">Créer la tâche</button>
       </div>
     </div>
   </div>
@@ -34,6 +34,6 @@
       isCompleted: task.isCompleted ?? false,
       completedAt: task.completedAt ?? null,
       createdAt: task.createdAt
-     }} />
+    }} />
   {/each}
 </div>
