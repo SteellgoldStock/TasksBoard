@@ -1,17 +1,12 @@
 <script lang="ts">
   import clsx from "clsx";
-
   export let value: string;
 
   export let placeholder: string = "Enter your message";
   export let disabled: boolean = false;
-  export let size: "large" | "default" | "small" = "default";
-  
-  const sizeClass = clsx({
-    "block w-full p-4 sm:text-md": size === "large",
-    "block w-full p-2.5 text-sm": size === "default",
-    "block w-full p-2 sm:text-xs": size === "small",
-  });
+  export let type: "text" | "password" | "email" = "text";
+
+  export let id: string | undefined = undefined;
 </script>
 
-<input type="text" disabled={disabled} placeholder={placeholder} class="{sizeClass} border rounded-lg sm:text-md bg-gray-700 border-gray-600 placeholder-gray-400 text-white" bind:value={value}>
+<input disabled={disabled} type={type} name="email" id={id} class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" bind:value={value} placeholder={placeholder}>
