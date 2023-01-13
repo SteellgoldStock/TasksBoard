@@ -39,9 +39,7 @@
   <div class="px-4 py-5 sm:p-6 md:p-4">
     <div class="flex items-center gap-3">
       <div class="{props.taskIdentifier} {isCompletedColor} flex-shrink-0 rounded-md p-3 hover:transition-all duration-500" on:click={completeTask} on:keypress={completeTask}>
-        <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l4 4L19 7" />
-        </svg>
+        <Check size={19} color="white" />
       </div>
       <Text size="sm" font="medium" align="left" color="text-default dark:text-dark">{ props.taskTitle }</Text>
     </div>
