@@ -8,6 +8,11 @@
   export let label: string | undefined = undefined;
 
   let id: string = Math.random().toString(2).substring(1);
+
+  function changeValue(event: Event) {
+    const target = event.target as HTMLInputElement;
+    value = target.value;
+  }
 </script>
 
 {#if label}
@@ -32,4 +37,4 @@ dark:text-white
 dark:focus:ring-blue-500
 dark:focus:border-blue-500
 {disabled == true ? "bg-gray-300 dark:bg-gray-600" : ""}
-" on:input={e => value = e.target.value} placeholder={placeholder}>
+" on:input={changeValue} placeholder={placeholder} />
