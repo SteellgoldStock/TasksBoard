@@ -2,8 +2,9 @@
   import dayjs from 'dayjs';
   import type { TaskDetailsProps } from './TaskDetails';
   import { removeClasses, addClasses } from '$lib/utils/Classes';
-    import clsx from 'clsx';
-    import { Text } from '../text';
+  import clsx from 'clsx';
+  import { Text } from '../text';
+  import { Check } from "lucide-svelte"
   
   export let props : TaskDetailsProps;
 
@@ -35,13 +36,13 @@
   }
 </script>
 
-<div class="mb-3 border-2 {completed ? "border-dashed" : ""} border-default-light-border bg-default-secondary rounded-lg shadow-lg dark:bg-dark-secondary dark:border-gray-700 hover:border-default-light-border-hover hover:transition-all duration-500 {completed ? "order-last opacity-30 hover:opacity-60" : ""}">
+<div class="mb-3 border-2 {completed ? "border-dashed" : ""} rounded-lg shadow-lg bg-secondary border-gray-700 hover:border-light-border-hover hover:transition-all duration-500 {completed ? "order-last opacity-30 hover:opacity-60" : ""}">
   <div class="px-4 py-5 sm:p-6 md:p-4">
     <div class="flex items-center gap-3">
-      <div class="{props.taskIdentifier} {isCompletedColor} flex-shrink-0 rounded-md p-3 hover:transition-all duration-500" on:click={completeTask} on:keypress={completeTask}>
+      <div class="{props.taskIdentifier} {isCompletedColor} flex-shrink-0 p-2 rounded-md hover:transition-all duration-500" on:click={completeTask} on:keypress={completeTask}>
         <Check size={19} color="white" />
       </div>
-      <Text size="sm" font="medium" align="left" color="text-default dark:text-dark">{ props.taskTitle }</Text>
+      <Text size="base" font="medium" align="left" color="text-wg">{ props.taskTitle }</Text>
     </div>
     <div class="mt-3">
       <Text size="base" font="normal" align="left" color="text-gray-300">{ props.taskContent }</Text>

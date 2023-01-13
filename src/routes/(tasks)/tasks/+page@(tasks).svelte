@@ -11,7 +11,7 @@
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3"> 
-  <div class="mb-3 border-2 border-dashed border-default-light-border bg-default-secondary rounded-lg shadow-lg dark:bg-dark-secondary dark:border-gray-700 hover:border-default-light-border-hover hover:transition-all duration-500">
+  <div class="mb-3 border-2 border-dashed bg-secondary rounded-lg shadow-lg border-gray-700 hover:border-light-border-hover hover:transition-all duration-500">
     <div class="px-4 py-5 sm:p-6 md:p-4">
       <div class="flex items-center gap-3">
         <Input bind:value={newTaskTitle} placeholder="Titre de la tâche" />
