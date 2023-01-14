@@ -8,9 +8,7 @@
   
   export let props : TaskDetailsProps;
 
-  let date = dayjs(props.createdAt).format('DD/MM/YYYY');
-  let hour = dayjs(props.createdAt).format('HH');
-  let minute = dayjs(props.createdAt).format('mm');
+  let date = dayjs(props.createdAt).format("DD/MM/YYYY à HH:mm");
   
   export let completed: boolean = false;
   let isCompletedColor: string = clsx({
@@ -42,7 +40,10 @@
       <div class="{props.taskIdentifier} {isCompletedColor} flex-shrink-0 p-2 rounded-md hover:transition-all duration-500" on:click={completeTask} on:keypress={completeTask}>
         <Check size={19} color="white" />
       </div>
-      <Text size="base" font="medium" align="left" color="text-wg">{ props.taskTitle }</Text>
+      <div>
+        <Text size="base" font="medium" align="left" color="text-wg">{ props.taskTitle }</Text>
+        <Text size="xs" font="normal" align="left" color="text-gray-300">Le { date }</Text>
+      </div>
     </div>
     <div class="mt-3">
       <Text size="base" font="normal" align="left" color="text-gray-300">{ props.taskContent }</Text>
