@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Input } from '$lib/components/form/inputs/simple';
-  import { TextArea } from '$lib/components/form/inputs/textarea';
+  import { Input } from '$lib/components/form/input';
+  import { TextArea } from '$lib/components/form/textarea';
   import { Task } from '$lib/components/layout/task';
 
   let newTaskTitle: string;
