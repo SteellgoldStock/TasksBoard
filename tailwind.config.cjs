@@ -1,23 +1,28 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line no-undef
 module.exports = {
-  darkMode: 'media',
-
   content: [
-    './src/**/*.{html,js,svelte,ts}'
+    "./src/**/*.{html,js,svelte,ts}"
   ],
+
   theme: {
     extend: {
       colors: {
-        'primary': '#111827',
-        'secondary': '#1F2937',
-        'danger': '#b91c1c',
-        'success': '#15803d',
-        'warning': '#fbbf24',
-        'info': '#0369a1',
+        "wg": "#f8fafc",
+        "primary": "#111827",
+        "secondary": "#1f2937",
+        "danger": "#ef4444",
+        "success": "#10b981",
+        "warning": "#fbbf24",
+        "info": "#0891b2",
+        "light": {
+          "border": {
+            DEFAULT: "#374151",
+            "hover": "#cbd5e1"
+          }
+        }
       }
     }
   },
-  plugins: [
-    require('@tailwindcss/forms')
-  ],
-}
+  plugins: []
+};
